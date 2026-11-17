@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Hub - Online Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .top-bar {
+            background: #ff4d6d;
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4d6d;
+        }
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 50px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+        .header-icons {
+            display: flex;
+            gap: 20px;
+        }
+        .header-icons i {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+        nav {
+            background: #fff;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .hero-section {
+            margin-top: 120px;
+            position: relative;
+            height: 500px;
+            background: url('hero-bg.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-content {
+            background: url('shopnow background.jpg')center/cover;
+            padding: 100px;
+            border-radius: 10px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background-color: maroon;
+            color:white;
+        }
+        .categories {
+            padding: 50px 0;
+            background: white;
+        }
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 50px;
+        }
+        .category-card {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 700px;
+            cursor: pointer;
+        }
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .category-card:hover img {
+            transform: scale(1.1);
+        }
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 20px;
+            padding-left: 72px;
+            color: white;
+        }
+        .featured-products {
+            padding: 50px 0;
+            background: #f9f9f9;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 50px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            color: #ff4d6d;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .offers-section {
+            padding: 50px 0;
+            background: white;
+        }
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 50px;
+        }
+        .offer-card {
+            background: #ff4d6d;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .offer-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 0;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 0 50px;
+        }
+        .footer-section h4 {
+            margin-bottom: 20px;
+            color: #ff4d6d;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-links i {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .bottom-footer {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <marquee direction="left">Free Shipping on Orders Above ₹999 | 30% Off on First Purchase</marquee>
+        </div>
+        <div class="main-header">
+            <div class="logo">Fashion Hub</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more">
+            </div>
+            <div class="header-icons">
+                <a href="login.html" title="Login">
+                    <i class="fas fa-user"></i>
+                  </a>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mens sec.html">Men</a></li>
+                <li><a href="women sec.html">Women</a></li>
+                <li><a href="kids.html">Kids</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="arrivals.html">New Arrivals</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero">
+            <h1>Fashion Hub 2025</h1>
+        </div>
+            <p>Elevate Your Wardrobe: Redefine Your Style</p>
+            <button style="background: #ff4d6d; color: rgb(240, 224, 224); border: none; padding: 15px 30px; border-radius: 25px; cursor: pointer; margin-top: 20px;">
+                <a href="index2.html">Shop Now</a> <!-- Link to the local HTML file -->
+            </button>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2 style="text-align: center; margin-bottom: 30px;">Shop by Category</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <img src="Men Background.jpg" alt="Men's Fashion">
+                <div class="category-overlay">
+                    <h3>Men's Fashion</h3>
+                    <p>Shop the latest trends</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="Unique.jpg" alt="Women's Fashion">
+                <div class="category-overlay">
+                    <h3>Women's Fashion</h3>
+                    <p>Discover your style</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="kids1.webp" alt="Kids Fashion">
+                <div class="category-overlay">
+                    <h3>Kids Fashion</h3>
+                    <p>Adorable collections</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    
+
+    <section class="offers-section">
+        <h2 style="text-align: center; margin-bottom: 30px;">Special Offers</h2>
+        <div class="offers-grid">
+            <div class="offer-card">
+                <h3>Summer Sale</h3>
+                <p>Up to 50% off on summer collection</p>
+                <button style="background: white; color: #ff4d6d; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; margin-top: 15px;">
+                    Shop Now
+                </button>
+            </div>
+            <div class="offer-card">
+                <h3>New Arrivals</h3>
+                <p>20% off on first purchase</p>
+                <button style="background: white; color: #ff4d6d; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; margin-top: 15px;">
+                    Explore
+                </button>
+            </div>
+            <div class="offer-card">
+                <h3>Members Only</h3>
+                <p>Extra 10% off for members</p>
+                <button style="background: white; color: #ff4d6d; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; margin-top: 15px;">
+                    Join Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-pinterest"></i>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter for updates and exclusive offers!</p>
+                <input type="email" placeholder="Enter your email" style="width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #444; background: transparent; color: white;">
+                <button style="background: #ff4d6d; color: white; border: none; padding: 10px; width: 100%; margin-top: 10px; cursor: pointer;">Subscribe</button>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p>&copy; 2025 Fashion Hub. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-title {
+            font-size: 1.5em;
+            color: #ff6f61;
+            margin: 10px 0;
+        }
+        .product-price {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .rating {
+            color: #ffcc00;
+            margin: 10px 0;
+        }
+        .star {
+            font-size: 1.2em;
+        }
+    .cart-link{position:fixed;top:14px;right:18px;z-index:20;background:#222;color:#fff;padding:10px 16px;border-radius:22px;text-decoration:none;font-weight:bold}
+    </style>
+</head>
+<body>
+    <a class="cart-link" href="cart.html">View Cart 🛒</a>
+    <div class="header">
+        <h1>Dress Collection</h1>
+    </div>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="Image 1.jpg" alt="Image 1">
+            <h2 class="product-title">Elegant Evening Dress</h2>
+            <p class="product-price">Rs. 1999</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">☆</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 2.jpg" alt="Image 2">
+            <h2 class="product-title">Short Kurti</h2>
+            <p class="product-price">Rs. 599</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 3.jpg" alt="Image 3">
+            <h2 class="product-title">Straight Fit Jeans</h2>
+            <p class="product-price">Rs. 1599</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 4.jpg" alt="Image 4">
+            <h2 class="product-title">Tank Top</h2>
+            <p class="product-price">Rs. 799</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 5.jpg" alt="Image 5">
+            <h2 class="product-title">Tank Top</h2>
+            <p class="product-price">Rs. 699</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 6.jpg" alt="Image 6">
+            <h2 class="product-title">Denim Skirt</h2>
+            <p class="product-price">Rs. 1199</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 7.jpg" alt="Image 7">
+            <h2 class="product-title">Short Kurti</h2>
+            <p class="product-price">Rs. 599</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 8.jpg" alt="Image 8">
+            <h2 class="product-title">Floral Skirt</h2>
+            <p class="product-price">Rs. 499</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 9.jpg" alt="Image 9">
+            <h2 class="product-title">Short Kurti</h2>
+            <p class="product-price">Rs. 599</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">☆</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 10.jpg" alt="Image 10">
+            <h2 class="product-title">Printed Short Kurti</h2>
+            <p class="product-price">Rs. 699</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 11.jpg" alt="Image 11">
+            <h2 class="product-title">Ethnic Wear</h2>
+            <p class="product-price">Rs. 999</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 12.jpg" alt="Image 12">
+            <h2 class="product-title">Chikankari Kurti</h2>
+            <p class="product-price">Rs. 399</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 13.jpg" alt="Image 13">
+            <h2 class="product-title">Oversized Printed T-Shirt</h2>
+            <p class="product-price">Rs. 599</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 14.jpg" alt="Image 14">
+            <h2 class="product-title">Long Skirt</h2>
+            <p class="product-price">Rs. 699</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 15.jpg" alt="Image 15">
+            <h2 class="product-title">Long Kurti</h2>
+            <p class="product-price">Rs. 799</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 16.jpg" alt="Image 16">
+            <h2 class="product-title">Sleeveless Long Kurti</h2>
+            <p class="product-price">Rs. 699</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 17.jpg" alt="Image 17">
+            <h2 class="product-title">Cargo Jeans</h2>
+            <p class="product-price">Rs. 1299</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 18.jpg" alt="Image 18">
+            <h2 class="product-title">Sleeveless Short Kurti</h2>
+            <p class="product-price">Rs. 499</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 19.jpg" alt="Image 19">
+            <h2 class="product-title">T-Shirt</h2>
+            <p class="product-price">Rs. 599</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 20.jpg" alt="Image 20">
+            <h2 class="product-title">Ethnic Kurti Set</h2>
+            <p class="product-price">Rs. 1299</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 21.jpg" alt="Image 21">
+            <h2 class="product-title">Formal Shirt</h2>
+            <p class="product-price">Rs. 799</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Image 22.jpg" alt="Image 22">
+            <h2 class="product-title">Chic Office Dress</h2>
+            <p class="product-price">Rs. 899</p>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">☆</span>
+                <span class="star">☆</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
